@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/progress.css">
+    <script defer src="progress.js"></script>
+    <title>Ozon fintech</title>
+</head>
+
+<body>
+    <div class="progress-container">
+        <!--progrees block-->
+        <div class="progress">
+            <svg class="progress__ring" width="120" height="120">
+                <circle cx="60" cy="60" r="55" stroke="#EFF3F6" stroke-width="10" fill="transparent" />
+                <circle class="progress__ring-circle" cx="60" cy="60" r="55" stroke="#005BFF" stroke-width="10" fill="transparent" />
+            </svg>
+        </div>
+        <!--api block-->
+        <div class="api">
+            <label class="api__value">
+                <input value="50" max="100" min="0" class="api__item-value" type="number">
+                <span>Value</span>
+            </label>
+            <label class="api__checkbox">
+                <input checked type="checkbox" id="animated-box">
+                <span>Animate</span>
+            </label>
+            <label class="api__checkbox">
+                <input type="checkbox" id="hide-box">
+                <span>Hide</span>
+            </label>          
+        </div>
+    </div>
+</body>
+
+</html>

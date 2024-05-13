@@ -1,0 +1,127 @@
+/* стили для progress block */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 568px;
+    background-color: #FFFFFF;
+}
+
+.progress {
+    width: 120px;
+    height: 120px;
+}
+
+.progress__ring-circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress--animated {
+    animation: rotate 2s infinite linear;
+}
+
+.progress--hidden {
+    visibility: hidden;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (orientation: landscape) {
+    .progress-container {
+        flex-direction: row;
+        height: 320px;
+        width: 568px;
+    }
+}
+
+/* стили для api block */
+.api__checkbox>input::-webkit-outer-spin-button,
+.api__checkbox>input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.api__checkbox>input,
+.api__checkbox>input:hover,
+.api__checkbox>input:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.api {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.api__value {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.api__checkbox {
+    cursor: pointer;
+}
+
+.api__checkbox>input {
+    display: none;
+}
+
+.api__checkbox>span {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.api__checkbox>span::before {
+    content: '';
+    width: 45px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: #E0E6EF;
+}
+
+.api__checkbox>span::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    transition: .3s;
+}
+
+.api__checkbox>input:checked + span::after {
+    transform: translateX(20px);
+}
+
+.api__checkbox>input:checked + span::before {
+    background-color: #005BFF;
+}
+
+.api__item-value {
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    width: 45px;
+    height: 25px;
+    outline: none;
+}
+
